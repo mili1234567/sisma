@@ -22,5 +22,21 @@ class ProductSeeder extends Seeder
             'stock' => 1000,
             'image' => 'curso.png'
         ]);
+          //creacion de productos
+          Product::create([
+            'name' => 'HOLA BEBE',
+            'price' =>350,
+            'description' => '750110065987',
+            'stock' => 1000,
+            'image' => 'curso.png'
+        ]);
+          //creacion de productos
+          Product::create([
+            'name' => 'BRRRR',
+            'price' =>350,
+            'description' => '750110065987',
+            'stock' => 1000,
+            'image' => 'curso.png'
+        ]);
     }
 }
