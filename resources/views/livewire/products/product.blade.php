@@ -1,4 +1,3 @@
-
 <div class="main-container">
     <div class="pd-ltr-20 xs-pd-20-10">
         <div class="min-height-200px">
@@ -14,15 +13,19 @@
                     <div class="pull-left">
                         <h4 class="text-blue h4">PRODUCTOS</h4>
                     </div>
-                    <div class="pull-right">
-                        <div id="DataTables_Table_0_filter" class="dataTables_filter">
-                            <label>Search:<input type="search" class="form-control form-control-sm"
-                                    placeholder="Search" aria-controls="DataTables_Table_0">
-                            </label>
-                        </div>
-                    </div>
+                   
                 </div>
 
+                <div class="row">
+                    <div class="col-6">
+                        @Include('common.searchbox')
+                    </div>
+
+                    <div class="col-6 text-right">
+                        <a href="javascript:void(0)" class="btn" style="background-color: #3b3f5f; color: aliceblue;"
+                            data-toggle="modal" data-target="#Medium-modal">Agregar</a>
+                    </div>
+                </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -72,6 +75,7 @@
                 </table>
 
                 {{ $data->links() }}
+
                 <div class="collapse collapse-box" id="border-table">
                     <div class="code-box">
                         <div class="clearfix">
@@ -100,7 +104,7 @@
 
 
 
-
+    @include('livewire.products.form')
 
 
 
@@ -113,11 +117,12 @@
 
         //evento de category ocultar
         window.livewire.on('product-added', msg => {
-            $('#theModal').modal('hide')
+            alert('hola')
+            $('#Medium-modal').modal('hide')
         });
         //evento de categoria actualizar
         window.livewire.on('product-updated', msg => {
-            $('#theModal').modal('hide')
+            $('#Medium-modal').modal('hide')
         });
         //para escuchar el evento mostrar ventana emergente
         window.livewire.on('product-deleted', msg => {
@@ -125,11 +130,11 @@
         });
         //evento de categoria actualizar
         window.livewire.on('modal-show', msg => {
-            $('#theModal').modal('show')
+            $('#Medium-modal').modal('show')
         });
         //evento de categoria actualizar
         window.livewire.on('modal-hide', msg => {
-            $('#theModal').modal('hide')
+            $('#Medium-modal').modal('hide')
         });
         //evento de categoria actualizar
         window.livewire.on('hidden.bs.modal', msg => {
@@ -137,22 +142,8 @@
         });
     });
 </script>
-	<!-- js -->
-	<script src="vendors/scripts/core.js"></script>
-	<script src="vendors/scripts/script.min.js"></script>
-	<script src="vendors/scripts/process.js"></script>
-	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<!-- buttons for Export datatable -->
-	<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.print.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
-	<script src="src/plugins/datatables/js/pdfmake.min.js"></script>
-	<script src="src/plugins/datatables/js/vfs_fonts.js"></script>
-	<!-- Datatable Setting js -->
-	<script src="vendors/scripts/datatable-setting.js"></script>
+<!-- js -->
+<script src="vendors/scripts/core.js"></script>
+<script src="vendors/scripts/script.min.js"></script>
+<script src="vendors/scripts/process.js"></script>
+<script src="vendors/scripts/layout-settings.js"></script>
