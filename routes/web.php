@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\PosController;
 use App\Http\Livewire\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
     Route::get('/', ProductController::class);
     Route::get('productos', ProductController::class);
+    Route::get('catalogo', PosController::class);
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
 });

@@ -16,27 +16,27 @@ class ProductSeeder extends Seeder
     {
          //creacion de productos
          Product::create([
-            'name' => 'LARAVEL Y LIVEWIRE',
-            'price' =>350,
-            'description' => '750110065987',
-            'stock' => 1000,
-            'image' => 'curso.png'
+            'name' => 'DELINEADOR DE OJOS EN CREMA',
+            'price' =>35,
+            'description' => 'delineador cafe  para ojos marca banana',
+            'stock' => 50,
+            'image' => '1.jpg'
         ]);
           //creacion de productos
           Product::create([
-            'name' => 'HOLA BEBE',
-            'price' =>350,
-            'description' => '750110065987',
-            'stock' => 1000,
-            'image' => 'curso.png'
+            'name' => 'RIMMEL MARCA MAYBELINE ',
+            'price' =>35,
+            'description' => 'rimel para osjos color negro maybeline ',
+            'stock' => 60,
+            'image' => '2.jpg'
         ]);
           //creacion de productos
           Product::create([
-            'name' => 'BRRRR',
-            'price' =>350,
-            'description' => '750110065987',
-            'stock' => 1000,
-            'image' => 'curso.png'
+            'name' => 'ESPONJA PARA MAQUILLAJE SOLBEUTY',
+            'price' =>10,
+            'description' => 'esponja multiuso para maquillaje marca solbeuty',
+            'stock' => 100,
+            'image' => '3.jpg'
         ]);
     }
 }
