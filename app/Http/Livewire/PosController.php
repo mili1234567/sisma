@@ -249,7 +249,7 @@ class PosController extends Component
     }
     
     //selecciona el p;roducto para anadir al carritpo
-    public function seleccionar()
+    public function guardarcarrito()
     {
         dd('hola');
     }
