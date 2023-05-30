@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::get('catalogo', PosController::class);
     Route::get('users', UsersController::class);
     Route::get('roles', RolesController::class);
+   
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
