@@ -382,7 +382,7 @@ var options6 = {
 	  type: 'radialBar',
 	  offsetY: 0
 	},
-	colors: ['#0B132B', '#222222'],
+	colors: ['#d21eff', '#222222'],
 	plotOptions: {
 	  radialBar: {
 		startAngle: -135,

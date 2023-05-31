@@ -1232,7 +1232,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, tabl
 
 .header-dark .header,
 .header-dark .header-left .header-search{
-	background: #0B132B;
+	background: #d21eff;
 }
 .header-dark .header .user-info-dropdown .dropdown-toggle,
 .header-dark .header .user-info-dropdown .dropdown-toggle .user-name,
@@ -1341,7 +1341,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, tabl
 	width: 280px;
 	height: 100vh;
 	z-index: 1000;
-	background: #0b132b;
+	background: #d21eff;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -1554,7 +1554,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, tabl
 	background-color: rgba(0, 0, 0, .4);
 }
 .sidebar-light .sidebar-menu > ul > li > .dropdown-toggle.active{
-	background-color: #0b132b;
+	background-color: #d21eff;
 	color: #ffffff;
 }
 .sidebar-light .sidebar-menu > ul > li > .dropdown-toggle.active .micon{
@@ -1585,25 +1585,25 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, tabl
 	background: #ffffff;
 }
 .sidebar-light .sidebar-menu .dropdown-toggle{
-	color: #0b132b;
+	color: #d21eff;
 	font-weight: 400;
 }
 .sidebar-light .sidebar-menu .dropdown-toggle .micon{
-	color: #0b132b;
+	color: #d21eff;
 }
 .sidebar-light .sidebar-menu .submenu li a{
-	color: #0b132b;
+	color: #5f0692;
 	font-weight: 400;
 }
 .sidebar-light .sidebar-menu .submenu li a:hover,
 .sidebar-light .sidebar-menu .submenu li a.active{
 	color: #ffffff;
-	background-color: #0b132b;
+	background-color: #d21eff;
 }
 .sidebar-light .sidebar-menu .dropdown-toggle:hover,
 .sidebar-light .sidebar-menu .show>.dropdown-toggle{
 	color: #ffffff;
-	background-color: #0b132b;
+	background-color: #d21eff;
 }
 .sidebar-light .sidebar-menu .dropdown-toggle:hover .micon,
 .sidebar-light .sidebar-menu .show>.dropdown-toggle .micon{
@@ -2511,7 +2511,7 @@ body.IE .register-page-wrap .container{
 }
 .sitemap ul li a{
 	display: inline-block;
-	color: #0b132b;
+	color: #d21eff;
 	font-weight: 500;
 	font-size: 15px;
 	-webkit-transition: all 0.3s ease-in-out;

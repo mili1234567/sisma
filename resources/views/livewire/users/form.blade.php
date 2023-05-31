@@ -45,9 +45,9 @@
         <div class="form-group">
             <label>Estatus</label>
             <select wire:model.lazy="status" class="form-control">
-                <option value="Elegir" selected>Elegir</option>
-                <option value="Active" selected>Activo</option>
-                <option value="Locked" selected>Bloqueado</option>
+                <option value="ELEGIR" >Elegir</option>
+                <option value="ACTIVE" >Activo</option>
+                <option value="LOCKED" >Bloqueado</option>
             </select>
             @error('status') <span class="text-danger er">{{$message}}</span>@enderror
         </div>
@@ -58,11 +58,11 @@
             <label>Asignar Role</label>
             <select wire:model.lazy='profile' class="form-control">
                 <option value="Elegir"  selected>Elegir</option>
-                <option value="Admin" selected>Administrador</option>
+                <option value="ADMIN" selected>Administrador</option>
                 <option value="Employee" selected>Empleado</option>
-                @foreach ($roles as $role)
+                {{-- @foreach ($roles as $role)
                     <option value="{{ $role->id }}">{{ $role->name }}</option>
-                @endforeach
+                @endforeach --}}
             </select>
             @error('profile')
                 <span class="text-danger er">{{ $message }}</span>

@@ -115,7 +115,7 @@
                              <h6><b>  {{$this->total}}</b></h6>
                             </td>
                             <td class="text-center">
-                                <button class="btn btn-success">
+                                <button wire:click='saveSale()' class="btn btn-success">
                                     GUARDAR
                                 </button>
                             </td>

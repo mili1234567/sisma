@@ -32,7 +32,8 @@ Route::middleware('auth')->group(function () {
    
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    
+
+    Route::get('/home2', [App\Http\Controllers\HomeController::class, 'index'])->name('home2');
 });
 // route::redirect('/','productos');
 

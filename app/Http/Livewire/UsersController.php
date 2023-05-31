@@ -77,7 +77,7 @@ class UsersController extends Component
         $this->selected_id = $user->id;
         $this->name = $user->name;
         $this->phone = $user->phone;
-        $this->profile = $this->profile;
+        $this->profile = $user->profile;
         $this->status = $user->status;
         $this->email = $user->email;
         $this->password ='';
@@ -165,7 +165,8 @@ class UsersController extends Component
             'password.min' => 'El password debe tener al menos 3 caracteres' 
         ];
 
-        $this->validate($rules.$messages);
+        
+        $this->validate($rules,$messages);
 
         $user = User::find($this->selected_id);
         $user->Update([
@@ -174,7 +175,7 @@ class UsersController extends Component
                 'phone' => $this->phone,
                 'status' => $this->status,
                 'profile' => $this->profile,
-                'password' => $this->bcrypt($this->password)
+                'password' => bcrypt($this->password)
         ]);
 
     if($this->image)

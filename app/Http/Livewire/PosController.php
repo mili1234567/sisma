@@ -4,6 +4,8 @@ namespace App\Http\Livewire;
 
 use App\Models\Denomination;
 use App\Models\Product;
+use App\Models\Sale;
+use App\Models\SaleDetails;
 use Darryldecode\Cart\Facades\CartFacade as Cart;
 use Livewire\Component;
 use DB;
@@ -184,45 +186,32 @@ class PosController extends Component
 
     public function saveSale()
     {
-        if($this->total <=0)
-        {
-            $this->emit('sale-error','AGREGAR PRODUCTOS A LA VENTA');
-            return;
-        }
-        if($this->efectivo <=0)
-        {
-            $this->emit('sale-error','INGRESA EL EFECTIVO');
-            return;
-        }
-        if($this->total > $this->efectivo)
-        {
-            $this->emit('sale-error','EL EFECTIVO DEBE SER MAYOR O IGUAL AL TOTAL');
-            return;
-        }
+        
+      
         DB::beginTransaction();
 
         try{
-            $sale = sale:: create([
+            $sale = Sale:: create([
                 'total' => $this->total,
                 'items' => $this->itemsQuantity,
-                'cash' => $this->efectivo,
-                'change' => $this->change,
+               
                 'user_id' => Auth()->user()->id
             ]);
+            
             if($sale)
             {
                 $items = Cart::getcontent();
                 foreach ($items as $item) {
-                    SaleDetail::create([
+                    SaleDetails::create([
                         'price' => $item->price,
                         'quantity' => $item->quantity,
                         'product_id' => $item->id,
-                        'sale_' => $sale->id,
+                        'sale_id' => $sale->id,
                     ]);
                     
                     //update stock
                     $product = product::find($item->id);
-                    $product->stoxk = $product->stock - $item->quantity;
+                    $product->stock = $product->stock - $item->quantity;
                     $product->save();
                 }
             }
@@ -230,16 +219,17 @@ class PosController extends Component
             DB::commit();
 
             Cart::clear();
-            $this->efectivo =0;
-            $this->change =0;
+         
+           
             $this->total = Cart::getTotal();
             $this->itemsQuantity = Cart::getTotalQuantity();
-            $this->emit('sale-ok','Venta registrada con exito');
-            $this->emit('print-ticket', '$sale->id');
+            
+          
 
         } catch (Exception $e) {
             DB::rollback();
-            $this->emit('sale-error',$e->getMessage());
+           
+            dd($e->getMessage());
         }
     }
 

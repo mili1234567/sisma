@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire;
 
+
 use Livewire\Component;
+
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Livewire\WithPagination;
@@ -16,10 +18,10 @@ class RolesController extends Component
     public $roleName, $search, $selected_id, $pageTitle, $componentName;
     private $pagination = 5;
 
-    public function paginationView()
-    {
-        return 'vendor.livewire.bootstrap';
-    }
+    // public function paginationView()
+    // {
+    //     return 'vendor.livewire.bootstrap';
+    // }
 
     public function mount()
     {
