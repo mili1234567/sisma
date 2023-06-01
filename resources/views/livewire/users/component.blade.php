@@ -68,6 +68,7 @@
                                 </td>
 
                                 <td class="text-center">
+                                    @can('users.edit')
                                     <a href="javascript:void(0)" wire:click.prevent="Edit({{ $users->id }})"
                                         class="btn btn-dark mtmobile" title="Edit">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -77,6 +78,7 @@
                                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                         </svg>
                                     </a>
+                                    @endcan
                                     <a href="javascript:void(0)" onclick="Confirmar('{{ $users->id }}')"
                                         class="btn btn-dark" title="Delete">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"

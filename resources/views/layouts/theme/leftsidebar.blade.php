@@ -36,7 +36,8 @@
                     <ul class="submenu">
                         <li><a href="{{url('users')}}">USUARIOS</a></li>
                         <li><a href="{{url('roles')}}">ROLES</a></li>
-                        <li><a href="{{url('roles')}}">PERMISOS</a></li>
+                        <li><a href="{{url('permisos')}}">PERMISOS</a></li>
+                        <li><a href="{{url('asignar')}}">ASIGNAR</a></li>
 
                     </ul>
                 </li>
