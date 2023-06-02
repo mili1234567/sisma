@@ -18,17 +18,17 @@
                         </select>
                     </div>
                     <button wire:click.prevent="SyncALL()" type="button" 
-                    class="btn btn-dark mbmobile inblock mr-5">Sincronizar Todos</button>
+                    class="btn btn-dark mbmobile inblock mr-5" style="background-color: rgb(175, 121, 163)">Sincronizar Todos</button>
 
                     <button onclick="Revocar()" type="button" 
-                    class="btn btn-dark mbmobile mr-5">Revocar Todos</button>
+                    class="btn btn-dark mbmobile mr-5" style="background-color: rgb(175, 121, 163)">Revocar Todos</button>
                 </div>
 
                 <div class="row mt-3">
                     <div class="col-sm-12">
                         <div class="table-responsive">
                             <table class="table table-bordered table striped mt-1" >
-                                <thead class="text-white" style="background: #3b3f5c">
+                                <thead class="text-white" style="background-color: rgb(175, 121, 163)">
                                     <tr>
                                        <th class="table-th text-white text-center">ID</th> 
                                        <th class="table-th text-white text-center">PERMISO</th> 

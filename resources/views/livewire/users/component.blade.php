@@ -11,7 +11,7 @@
             <div class="pd-20 card-box mb-30">
                 <div class="clearfix mb-20">
                     <div class="pull-left">
-                        <h4 class="text-blue h4">USUARIOS</h4>
+                        <h4 style="color: rgb(175, 121, 163)" class=" h4">USUARIOS</h4>
                     </div>
 
                 </div>
@@ -23,7 +23,7 @@
 
                     @can('users.create')
                         <div class="col-6 text-right">
-                            <a href="javascript:void(0)" class="btn" style="background-color: #3b3f5f; color: aliceblue;"
+                            <a href="javascript:void(0)" class="btn" style="background-color: rgb(175, 121, 163); color: aliceblue;"
                                 data-toggle="modal" data-target="#Medium-modal">Agregar</a>
                         </div>
                     @endcan
@@ -69,7 +69,7 @@
 
                                 <td class="text-center">
                                     @can('users.edit')
-                                    <a href="javascript:void(0)" wire:click.prevent="Edit({{ $users->id }})"
+                                    <a href="javascript:void(0)" style="background-color: rgb(175, 121, 163)"  wire:click.prevent="Edit({{ $users->id }})"
                                         class="btn btn-dark mtmobile" title="Edit">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -80,7 +80,7 @@
                                     </a>
                                     @endcan
                                     <a href="javascript:void(0)" onclick="Confirmar('{{ $users->id }}')"
-                                        class="btn btn-dark" title="Delete">
+                                        class="btn btn-dark"  style="background-color: rgb(175, 121, 163)" title="Delete">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -115,12 +115,7 @@
             </div>
 
             <!-- Contextual classes End -->
-        </div>
-        <div class="footer-wrap pd-20 mb-20 card-box">
-            DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit
-                Hingarajiya</a>
-        </div>
-    </div>
+        
 
     @include('livewire.users.form')
 

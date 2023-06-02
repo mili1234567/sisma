@@ -11,7 +11,7 @@
             <div class="pd-20 card-box mb-30">
                 <div class="clearfix mb-20">
                     <div class="pull-left">
-                        <h4 class="text-blue h4">PRODUCTOS</h4>
+                        <h4 style="color: rgb(175, 121, 163)" class=" h4">PRODUCTOS</h4>
                     </div>
                    
                 </div>
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="col-6 text-right">
-                        <a href="javascript:void(0)" class="btn" style="background-color: #3b3f5f; color: aliceblue;"
+                        <a href="javascript:void(0)" class="btn" style="background-color: rgb(175, 121, 163)"
                             data-toggle="modal" data-target="#Medium-modal">Agregar</a>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                                 <td class="text-center">
                                     <a href="javascript:void(0)"
                                     wire:click.prevent="Edit({{$product->id}})"
-                                    class="btn btn-dark mtmobile" title="Edit">
+                                    class="btn btn-dark mtmobile" style="background-color: rgb(175, 121, 163)" title="Edit">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit">
@@ -73,7 +73,7 @@
                                     </a>
                                     <a href="javascript:void(0)"
                                     onclick="Confirm('{{$product->id}}')"                                
-                                    class="btn btn-dark" title="Delete">
+                                    class="btn btn-dark" style="background-color: rgb(175, 121, 163)" title="Delete">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -108,12 +108,7 @@
             </div>
 
             <!-- Contextual classes End -->
-        </div>
-        <div class="footer-wrap pd-20 mb-20 card-box">
-            DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit
-                Hingarajiya</a>
-        </div>
-    </div>
+       
 
 
 

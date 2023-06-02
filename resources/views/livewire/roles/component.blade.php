@@ -1,36 +1,11 @@
 <div class="main-container">
-    <div class="pd-20 card-box mb-30">
-        <div class="clearfix mb-20">
-            <div class="page-header">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="title">
-                            <h4>Basic Tables</h4>
-                        </div>
-                        <nav aria-label="breadcrumb" role="navigation">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Basic Tables</li>
-                            </ol>
-                        </nav>
-                    </div>
-                    <div class="col-md-6 col-sm-12 text-right">
-                       
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">Export List</a>
-                                <a class="dropdown-item" href="#">Policies</a>
-                                <a class="dropdown-item" href="#">View Assets</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   
           
             <!-- Striped table start -->
             <div class="pd-20 card-box mb-600">
                 <div class="clearfix mb-20">
                     <div class="pull-left">
-                        <h4 class="text-blue h4">ROLES TABLAS</h4>
+                        <h4 style="color: rgb(175, 121, 163)" class="h4">ROLES TABLAS</h4>
                       
                     </div>
                  
@@ -54,7 +29,7 @@
                                     <h6>{{ $role->name }}</h6>
                                 </td>
                                 <td class="text-center">
-                                    <a href="javascript:void(0)" wire:click="Edit({{ $role->id }})"
+                                    <a href="javascript:void(0)" a style="background-color: rgb(175, 121, 163)" wire:click="Edit({{ $role->id }})"
                                         class="btn btn-dark mtmobile" title="Editar Registro">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -63,7 +38,7 @@
                                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                         </svg>
                                     </a>
-                                    <a href="javascript:void(0)" onclick="Confirm('{{ $role->id }}')"
+                                    <a href="javascript:void(0)" a style="background-color: rgb(175, 121, 163)" onclick="Confirm('{{ $role->id }}')"
                                         class="btn btn-dark" title="Eliminar Registro">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

@@ -4,14 +4,11 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <div class="title">
+                        <div class="title" >
                             <h4>CATALOGO DE PRODUCTOS</h4>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">UI Cards Hover</li>
-                            </ol>
+                            
                         </nav>
                     </div>
                 </div>
@@ -45,7 +42,7 @@
             </div>
 
             <!-- Slide Left effect -->
-            <h5 class="h4 text-blue mb-10">CARRITO DE COMPRA</h5>
+            <h5 style="color: rgb(175, 121, 163)" class="h4  mb-10">CARRITO DE COMPRA</h5>
             
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 mb-30">
@@ -55,7 +52,7 @@
 
             <div class="table-reponsive tblscroll" style="max-height: 650px; overflow: hidden">
                 <table class="table table-bordered table-striped mt-1">
-                    <thead class="text-white" style="background: #3B3F5C">
+                    <thead class="text-white" style="background-color: rgb(175, 121, 163)">
                         <tr>
                             <th width="10%"></th>
                             <th class="table-th text-left text-white">DESCRIPCION</th>
@@ -92,14 +89,14 @@
                                         ${{number_format($item->price * $item->quantity,2)}}
                                     </h6>
                             </td>
-                            <td class="text-center">
-                                <button onclick="Confirm('{{$item->id}}', 'removeItem', 'CONFIRMAS ELIMINAR EL  REGISTRO?')" class="btn btn-dark mbmobile">
+                            <td class="text-center"  >
+                                <button onclick="Confirm('{{$item->id}}', 'removeItem', 'CONFIRMAS ELIMINAR EL  REGISTRO?')" class="btn btn-dark mbmobile" style="background-color: rgb(175, 121, 163)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
                                 </button>
-                                <button wire:click.prevent="decreaseQty({{$item->id}})" class="btn btn-dark mbmobile">
+                                <button wire:click.prevent="decreaseQty({{$item->id}})" class="btn btn-dark mbmobile" style="background-color: rgb(175, 121, 163)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                                 </button>
-                                <button wire:click.prevent="increaseQty({{$item->id}})" class="btn btn-dark mbmobile">
+                                <button wire:click.prevent="increaseQty({{$item->id}})" class="btn btn-dark mbmobile" style="background-color: rgb(175, 121, 163)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
                                 </button>
                             </td>
@@ -115,7 +112,7 @@
                              <h6><b>  {{$this->total}}</b></h6>
                             </td>
                             <td class="text-center">
-                                <button wire:click='saveSale()' class="btn btn-success">
+                                <button wire:click='saveSale()' class="btn btn-success" style="background-color: rgb(175, 121, 163)">
                                     GUARDAR
                                 </button>
                             </td>
